@@ -1,0 +1,34 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		
+	//check whether the String is palindrome or not
+	
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextInt();  
+		
+		boolean isPalindrome = true;
+		for(int i = 0, j = str.length() - 1 ; i < j ; i++,j--)
+		{
+		    if(str.charAt(i) == str.charAt(j))
+		       continue;
+		    
+		    isPalindrome = false;
+		    break;
+		    
+		}
+		
+		
+		System.out.print(isPalindrome ? "Palindrome  " : "Not Palindrome");
+		
+
+	}
+}
