@@ -1,0 +1,33 @@
+// Java program to find maximum product subarray
+import java.io.*;
+import java.util.*;
+
+class Main {
+	// Driver Code
+	public static void main(String[] args)
+	{
+	    Scanner sc  = new Scanner(System.in);
+	    int n = sc.nextInt();
+	    int arr[] = new int[n];
+	    for(int i=0;i<n;i++)
+	    arr[i]=sc.nextInt();
+	    int k  = sc.nextInt();
+	    int temprod=0,si=0,ei=0;
+	    for(int i=0;i<n-k;i++)
+	    {
+	        int prod = 1;
+	        for(j=i;j<k+i;j++)
+	        {
+	            prod*=arr[j];
+	        }
+	        if(temprod<=prod)
+	        {
+	            temprod = prod;
+	            si=i;
+	            ei=j;
+	        }
+	    }
+	    System.out.println(temprod);
+	    
+	}
+}
