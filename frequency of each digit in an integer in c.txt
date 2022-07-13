@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int i=0;i<=9;i++)
+    {
+        int c=0,temp=n;
+        while(temp!=0)
+        {
+            int rem=temp%10;
+            if(rem==i)
+            c++;
+            temp/=10;
+        }
+        printf("%d : %d\n",i,c);
+    }
+}
